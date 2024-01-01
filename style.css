@@ -29,15 +29,33 @@ a.nav-link:hover {
     background-color: #e8f0e2;
   }
 
-  
+  /* -xs - <576px,
+  -sm - >= 576px,
+  -md- >=768px,
+  -lg- >=992px,
+  -xl- >=1200px,
+  -xxl- >=1400px
+   */
+   /* col-lg-3 col-md-6 col-sm-12 */
 
+   /* lg > - 1 row 4
+   md -lg - 1 row two
+   sm-md - 1 row one */
 
 
 /* section 1 */
 
+/* max-width:600px, phones
+S  - min-width:600px, tablets and large phones
+M  - min-width:768px, landscape tablet
+L  - min-width:992px, laptops/desktops
+XL - min-width:1200px, large laptops/desktops */
+
+
  #cover-image {
      background-image: url('images/bgfinal.jpg');
      background-size: cover;
+     width: 100%;
      height: 700px;
 }
 
@@ -78,6 +96,22 @@ a.nav-link:hover {
   margin-top: 230px;
   margin-right: -300px;
 }
+  
+}
+
+@media screen and  (max-width:330px){
+  
+  .title{
+    font-size: 30px;
+    font-weight: 700;
+    margin-right: 30px;
+  }
+  
+#cover-image p{
+  margin-top: 230px;
+  margin-right: -300px;
+}
+  
   
 }
 
@@ -141,6 +175,7 @@ a.nav-link:hover {
 }
 }
 
+
   /* section 3 */
  
  
@@ -157,18 +192,10 @@ a.nav-link:hover {
     color: rgb(39, 124, 6);
 }
 
-  .cards-1 {
+   .row {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  .cards-2{
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
   }
 
   .card{
@@ -204,6 +231,8 @@ a.nav-link:hover {
     margin-right: 30px ;
   }
 }
+
+
 
 
 
@@ -262,44 +291,19 @@ a.nav-link:hover {
   filter: drop-shadow(0px 0px 20px rgb(0,0,0,.8));
 }
 
-.menu-cards1{
-  display: flex;
-  margin-left: 80px;
-  margin-top: 60px;
- 
-}
 
-.menu-cards2{
-  display: flex;
-  margin-left: 80px;
-  margin-top: 60px;
-}
-
-.menu-cards1 .card-title{
+.row-1 .card-title{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
   font-weight: bold;
 }
 
-.menu-cards2 .card-title{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
-  font-weight: bold;
-}
 
-.menu-cards1 .card{
+.row-1 .card{
   color: #543a05;
   background-color:  rgb(220, 220, 220);
 }
 
-.menu-cards2 .card{
-  color: #5c3d05;
-  background-color:  rgb(220, 220, 220);
-}
-
-.menu-cards1 .card .btn{
-  background-color:  #b3b3b3;
-}
-
-.menu-cards2 .card .btn{
+.row-1 .card .btn{
   background-color:  #b3b3b3;
 }
 
@@ -327,21 +331,26 @@ a.nav-link:hover {
   margin-left: 6rem;
 }
 
-.menu-cards1{
-  margin-left: 20px;
-  margin-top: 30px;
-  width: 100%;
- 
 }
 
-.menu-cards2{
-  display: flex;
-  margin-left: 20px;
-  margin-top: 30px;
-  width: 100%;
-}
+@media screen and (max-width: 330px) {
 
-}
+
+  .starters {
+    width: 80%;
+    height: 130px;
+  }
+  
+  .starters h1{
+     margin-left: 60px;
+  }
+  
+  
+  .menu-img{
+    margin-left: 6rem;
+  }
+  
+  }
 
 
 
@@ -605,7 +614,7 @@ form button{
   width: 20%;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:768px) {
   
 .contact i{
   font-size: 14px;
@@ -766,8 +775,13 @@ html{
    scroll-behavior: smooth;
 }
 
-@media screen and (max-width:600px) {
-  
+@media screen and (max-width:768px) {
+
+  footer{
+   width: 100%;
+    height: auto;
+  }  
+
 .footer-1{
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -800,26 +814,17 @@ html{
   margin-top: 40px;
 }
 
-.up-arrow {
-  float: right;
-  margin: 5px ;
-  background-image: linear-gradient(to bottom right, yellow, rgb(243, 48, 48));
-  border-radius: 50%; 
-  padding: 10px; 
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.up-arrow a {
-  text-decoration: none;
-}
 
-.up-arrow i {
-  color: black;
-  font-size: 1.5rem;
-}
-
-.up-arrow:hover i {
-  color: white;
-}
-
+@media screen and (max-width:450px) {
+  
+  .footer-1{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 2px;
+    margin-top:2px;
+  }
+  
+ 
 }
