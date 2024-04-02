@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resto Cafe</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- google font 1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@300;400&display=swap" rel="stylesheet">
+   
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- JS link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- Navbar -->
+  
+    
+    <nav class="navbar navbar-expand-lg bg-body-teritary h-100">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-3" href="#">
+            <img class="logo" src="images/logo1-removebg-preview.png" alt="logo image" width="70px" height="70px">
+            <span>K</span>opi <span>&</span> <span>R</span>esto <span>C</span>afe
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+              <li class="nav-item me-5">
+                <a class="nav-link active text-success" href="#header">Home</a>
+              </li> 
+              <li class="nav-item me-5">
+                <a class="nav-link" href="#about">About Us</a>
+              </li>
+               <li class="nav-item dropdown me-3">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Menu
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#menu">Starters & Bites</a></li>
+                  <li><a class="dropdown-item" href="#menu">Main Courses</a></li>
+                  <li><a class="dropdown-item" href="#menu">Dessert Delights</a></li>
+                </ul>
+              </li>
+              <li class="nav-item me-5">
+                <a class="nav-link" href="#team">Our Team</a>
+              </li>
+              <li class="nav-item me-5">
+                <a class="nav-link" href="#cntact">Contact</a>
+              </li>
+            </ul>
+              <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-success bg-body-success me-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+             Reservation
+            </button>
+
+               <!-- modal -->
+               <div class="modal  " id="exampleModal" style="width: 80%;">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content custom-modal">
+                        <div class="modal-header">
+                            <h3 class="modal-title mx-auto me-3 text-dark">Reserve a Table</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body mx-auto">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="fn" class="form-label">Full Name</label>
+                                            <input id="fn" type="text" class="form-control" placeholder="Your Name">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="cn" class="form-label">Email address</label>
+                                            <input id="cn" type="email" class="form-control" placeholder="your@example.com">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="cn" class="form-label">Phone Number</label>
+                                            <input id="cn" type="tel" class="form-control" placeholder="123-456-7890">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="persons" class="form-label">Number of persons</label>
+                                            <input id="persons" type="number" class="form-control" placeholder="12 persons">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="dob" class="form-label">Date</label>
+                                            <input type="date" id="dob" class="form-control" placeholder="dd-mm-yyyy">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="time" class="form-label">Time</label>
+                                            <input type="time" id="time" class="form-control" placeholder="5:00 PM">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="add" class="form-label">Special Request</label>
+                                    <textarea id="add" rows="3" class="form-control"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary mx-auto">Submit Request</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+          </div>
+        </div>
+      </nav>
+
+      <!-- section 1 -->
+
+      <div id="cover-image">
+        <div class="header">
+          <h1 class="title">RELISH <span>THE</span>  TASTE</h1>
+      </div>
+      <p>Explores The Art Of Mindful Eating,Encouraging <br> Readers To Deeply Appreciate The Intricate Flavours And<br> Aromas In Every Culinary Experience.</p>
+
+    </div>
+      
+      
+     <!-- About section  -->
+
+     <section id="about">
+     
+      <div class="bg-image">
+          <div class="content">
+            <div class="about-us  col-md-7">
+              <h3>About Us</h3>
+              <h2>Passion for Food, Love for Hospitality</h2>
+              <p>Welcome to Kopi & Resto Cafe, where culinary excellence meets a delightful dining experience. At our restaurant, we are passionate about creating memorable moments through exceptional food, warm hospitality, and a welcoming ambiance.</p>              <p>At Kopi & Resto Cafe, we believe in creating a warm and inviting atmosphere. Whether you're celebrating a special occasion, enjoying a meal with loved ones, or simply looking for a cozy place to unwind, we invite you to share in the joy of good food and great company.</p>
+            </div>
+              <div class="col-md-5 about-img">
+                <img src="images/m8.jpg" alt="about image">
+              </div>
+        
+          </div>
+
+        </div>
+           
+          
+     </section>
+
+     <!-- specials section  -->
+
+      <section id="specials">
+
+      
+          <h3 class="details">Our <span>Special</span> Dishes</h3>
+          
+
+          <div class="container">
+            <div class="row">
+          
+          <div class="card col-lg-4 col-md-6 col-sm-12 " style="width: 15rem;">
+            <img src="images/specials.jpg" class="card-img-top" alt="special-1">
+            <div class="card-body">
+              <div class="star">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked "></i>
+              </div>
+              <p class="card-text">Burgers</p>
+            </div>
+          </div>
+
+          <div class="card col-lg-4 col-md-6 col-sm-12" style="width: 15rem;">
+            <img src="images/special-1.jpg" class="card-img-top" alt="specials-2">
+            <div class="card-body">
+              <div class="star">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star "></i>
+                <i class="fa-solid fa-star "></i>
+              </div>
+              <p class="card-text">Beverages</p>
+            </div>
+          </div>
+
+          <div class="card col-lg-4 col-md-6 col-sm-12 mt-1" style="width: 15rem;">
+            <img src="images/special-3.jpg" class="card-img-top" alt="specials-3">
+            <div class="card-body">
+              <div class="star">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star "></i>
+              </div>
+              <p class="card-text">Desserts</p>
+            </div>
+          </div>
+        
+
+      </div>
+
+      <div class="row d-flex mt-3">
+         
+          <div class="card col-lg-4 col-md-6 col-sm-12" style="width: 15rem;">
+            <img src="images/specials-4.jpg" class="card-img-top" alt="specials-4">
+            <div class="card-body">
+              <div class="star">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star "></i>
+                <i class="fa-solid fa-star "></i>
+              </div>
+              <p class="card-text">Breakfast</p>
+            </div>
+          </div>
+
+          <div class="card col-lg-4 col-md-6 col-sm-12" style="width: 15rem;">
+            <img src="images/specials-5.jpg" height="70%" width="70%" class="card-img-top" alt="specials-5">
+            <div class="card-body">
+              <div class="star">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <p class="card-text">Salads</p>
+            </div>
+          </div>
+
+          <div class="card col-lg-4 col-md-6 col-sm-12 mt-1" style="width: 15rem;">
+            <img src="images/special-d.jpg" class="card-img-top" alt="specials-6">
+            <div class="card-body">
+              <div class="star">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star "></i>
+              </div>
+              <p class="card-text">Cold coffee</p>
+            </div>
+          </div>
+        </div>
+
+    </div>
+      
+
+     </section> 
+    
+    <!-- Menu section  -->
+
+    <section id="menu">
+
+        <h1 class="headh1">FOOD AND BEVERAGES LIST</h1>
+      <div class="buttons">
+        <button type="button" class="btn btn-warning">Starters & Bites</button>
+        <button type="button" class="btn btn-danger">Main Courses</button>
+        <button type="button" class="btn btn-danger">Dessert Delights </button>
+      </div>
+    
+    
+        <div class="starters">
+           <h1 class="starter">STARTERS</h1>
+           <img class="menu-img" src="images/menu logo.png" alt="menu image">
+        </div>
+        
+       <!--menu card 1  -->
+
+        <div class="container">
+              <div class="row row-1 mt-5 ">
+
+                <div class="card col-lg-3 col-md-6 col-sm-12" style="width: 15rem;">
+                  <img src="images/m1.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Buttermilk Pancakes</h5>
+                    <h4 class="card-title">₹200</h4>
+                    <a href="#" class="btn ">Order Now</a>
+                  </div>
+                </div>
+
+                <div class="card col-lg-3 col-md-6 col-sm-12" style="width: 15rem;">
+                  <img src="images/m2.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Tomato Tacos</h5>
+                    <h4 class="card-title">₹150</h4>
+                    <a href="#" class="btn ">Order Now</a>
+                  </div>
+                </div>
+
+                <div class="card col-lg-3 col-md-6 col-sm-12 " style="width: 15rem;">
+                  <img src="images/m3.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Mini-Burgers</h5>
+                    <h4 class="card-title">₹120</h4>
+                    <a href="#" class="btn ">Order Now</a>
+                  </div>
+                </div>
+
+                <div class="card col-lg-3 col-md-6 col-sm-12" style="width: 15rem;">
+                  <img src="images/m4.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Cheesecake</h5>
+                    <h4 class="card-title">₹250</h4>
+                    <a href="#" class="btn ">Order Now</a>
+                  </div>
+                </div>
+
+              </div>
+
+               <!-- menu card 2 -->
+
+              <div class="row row-1 mt-5">
+
+                <div class="card col-lg-3 col-md-6 col-sm-12" style="width: 15rem;">
+                  <img src="images/m9.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Mint Matcha Cocktail</h5>
+                    <h4 class="card-title">₹80</h4>
+                    <a href="#" class="btn ">Order Now</a>
+                  </div>
+                </div>
+
+                <div class="card col-lg-3 col-md-6 col-sm-12" style="width: 15rem;">
+                  <img src="images/m10.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Blueberry Mojitos</h5>
+                    <h4 class="card-title">₹80</h4>
+                    <a href="#" class="btn ">Order Now</a>
+                  </div>
+                </div>
+
+                <div class="card col-lg-3 col-md-6 col-sm-12" style="width: 15rem;">
+                  <img src="images/m11.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Banoffee Trifle</h5>
+                    <h4 class="card-title">₹180</h4>
+                    <a href="#" class="btn ">Order Now</a>
+                  </div>
+                </div>
+
+                <div class="card col-lg-3 col-md-6 col-sm-12" style="width: 15rem;">
+                  <img src="images/m12.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Mutton Biriyani</h5>
+                    <h4 class="card-title">₹220</h4>
+                    <a href="#" class="btn ">Order Now</a>
+                  </div>
+                </div>
+
+              </div>
+
+        </div>
+
+  
+
+      <div class="menulst">
+          <img src="images/menulast-removebg-preview (2).png" alt="">
+      </div>
+
+    </section> 
+
+ <!-- Team section  -->
+     
+     <section id="team">
+      
+      <div class="our_team">
+        <h3>Team</h3>
+        <h1>Our <span>Professional</span> Chefs</h1>
+      </div>
+
+        <div class="team-content">
+          <div class="chef">
+          <p>In our kitchen, culinary excellence is not just a goal; it's a way of life. Our professional chefs are the heart and soul of our dining experience, embodying a unique blend of qualities that elevate our culinary offerings to unparalleled heights.</p>
+
+          <div class="highlights">
+            <div class="point1">
+              <p> <i class="fa-solid fa-circle-check tick" style="color: #430909;"></i>Culinary professionals with extensive knowledge and skills.</p>
+              <p><i class="fa-solid fa-circle-check tick" style="color: #430909;"></i>Innovative minds crafting unique and delightful dishes.</p>
+              <p><i class="fa-solid fa-circle-check tick" style="color: #430909;"></i> Infusing every creation with a deep love for food and cooking.</p>
+            </div>
+
+            <div class="point2">
+              <p><i class="fa-solid fa-circle-check tick" style="color: #430909;"></i> Staying ahead of culinary trends, bringing fresh ideas to the table.</p>
+              <p> <i class="fa-solid fa-circle-check tick" style="color: #430909;"></i>Team players fostering a collaborative kitchen culture.</p>
+              <p><i class="fa-solid fa-circle-check tick" style="color: #430909;"></i>Dedicated to exceeding guest expectations with every dish.</p>
+            </div>
+          
+          </div>
+        </div>
+
+      <div class="chef_img">
+        <div class="img_1">
+          <img src="images/chef1.png" class="img-fluid" alt=" chef 1 ">
+        </div>
+    </div>
+    </div>
+
+     </section> 
+
+
+     <!-- Review Section  -->
+
+    
+      <section id="review">
+      
+      <div class="heading">
+          <h3>Testmonials</h3>
+          <h1>What <span>People</span> Says<span>...</span></h1>
+        </div>
+
+        <div class="reviews">
+          <div class="container">
+            <div class="row">
+
+          <div class="card mb-3 col-lg-4 col-md-6 col-sm-12 " >
+            <div class="row g-0">
+              <div class="col-md-3">
+                <div class="img-c" >
+                  <img src="images/c1.jpg" alt="...">
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5>Sophie Anderson</h5>
+                  <p >"Exceptional dining experience ! From the delectable cuisine to the attentive service, every visit is a delightful journey through exquisite flavors. A must-try for food enthusiasts!"</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 3 months ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3 col-lg-4 col-md-6 col-sm-12" >
+            <div class="row g-0">
+              <div class="col-md-3">
+                <div class="img-c" >
+                  <img src="images/c2.jpg" alt="...">
+                </div>
+              </div>
+              <div class="col-md-8 ">
+                <div class="card-body">
+                  <h5 >Jackson Bennett</h5>
+                  <p >"Exceptional dining experience ! From the delectable cuisine to the attentive service, every visit is a delightful journey through exquisite flavors. A must-try for food enthusiasts!"</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 2 days ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3 col-lg-4 col-md-6 col-sm-12" >
+            <div class="row g-0">
+              <div class="col-md-3">
+                <div class="img-c" >
+                <img src="images/c11.webp" alt="...">
+              </div>
+            </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 >Amal Wright</h5>
+                  <p >"Exceptional dining experience ! From the delectable cuisine to the attentive service, every visit is a delightful journey through exquisite flavors. A must-try for food enthusiasts!"</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 1 hr ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </div>
+
+     </section> 
+
+
+
+     <!-- Contact Section -->
+
+      <section id="cntact">
+
+      <div class="contact-heading">
+        <h3>Contact Us</h3>
+        <h2>Contact <span>For Any</span> Query</h2>
+      </div>
+    
+      <div class="info d-flex">
+         <div class="container">
+          <div class="row">
+       
+          <div class="col-sm-6 col-md-4 col-lg-3 contact">
+          <i class="fa-solid fa-phone-volume icons" ></i>
+          <h2>Phone</h2>
+          <p class="detail">+23-456-4590</p>
+        </div>
+      
+
+        
+          <div class="col-sm-6 col-md-4 col-lg-3 contact">
+          <i class="fa-solid fa-envelope icons" ></i>
+          <h2>Email</h2>
+          <p class="detail">kopiresto@gmail.com</p>
+        </div>
+      
+
+        
+          <div class="col-sm-6 col-md-4 col-lg-3 contact">
+          <i class="fa-solid fa-location-dot icons" ></i>
+          <h2>Location</h2>
+          <p class="detail">800,London,US</p>
+        </div>
+        
+
+
+        <div class="col-sm-6 col-md-4 col-lg-3 contact">
+          <i class="fa-solid fa-rotate-right icons" ></i>
+          <h2>Follow Us</h2>
+          <div class="social-medias">
+            <i class="fa-brands fa-twitter" ></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram" ></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-youtube" ></i>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+    </div>
+   
+
+    <div class="location">
+      
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317719.5877495047!2d-0.4312316281021684!3d51.52817979531493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sin!4v1703144430149!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    
+      <form>
+        <label for="fn"></label>
+        <input id="fn" type="text" placeholder=" Your Name"><br> <br>
+        <label for="mail"></label>
+        <input id="mail" type="email"  placeholder=" Your Email"><br> <br>
+        <label for="subject"></label>
+        <input id="subject" type="text"  placeholder="Subject"><br> <br>
+        <label for="add"></label>
+        <textarea id="add" rows="10" colums="10" placeholder="Message"></textarea><br><br>
+        <button>Send Message</button>
+      </form>
+  
+    </div>
+
+     </section>
+ 
+
+     <!-- footer -->
+
+      <footer>
+
+      <div class="footer-1">
+         
+            
+          <div class=" basic-info">
+            <h3>About Us</h3>
+            <hr>
+            <p>At Kopi & Resto Cafe, we believe in creating a warm and inviting atmosphere.Join us in a cozy ambiance, perfect for special occasions and everyday moments alike. Whether you're celebrating special occasion,we invite to share food & company.</p>
+          </div>
+
+          <div class="  basic-info">
+            <h3>Opening Hours</h3>
+
+            <ul>
+              <li>Mon-Tue : 9 AM to 10 PM</li>
+              <li>Wed-Thu : 9 AM to 10 PM</li>
+              <li>Fri-Sat : 9 AM to 10 PM</li>
+              <li>Sun Closed</li>
+            </ul>
+
+          </div>
+
+          <div class=" basic-info">
+            <h3>Contact Information</h3>
+            <p>800,London,US</p>
+            <p>kopiresto@gmail.com</p>
+            <p>+01 123-456-4590</p>
+          </div>
+
+          <div class=" basic-info">
+            <input type="email" placeholder="Email address" ><br>
+            <button>Subscribe</button>
+
+            <div class="footer-icons">
+              <i class="fa-brands fa-twitter" ></i>
+              <i class="fa-brands fa-facebook" ></i>
+              <i class="fa-brands fa-instagram" ></i>
+              <i class="fa-brands fa-linkedin" ></i>
+              <i class="fa-brands fa-youtube" ></i>
+            </div>
+          </div>
+
+        </div>
+    
+        <hr>
+        <div class="copy">
+        <p class="copyright">© My Restaurant Website design 2023, All Rights Reserved ® Anagha Maria Jacob</p>
+      </div>
+        <div class="up-arrow">
+          <a href="#cover-image"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+      
+     
+     </footer> 
+
+</body>
+</html>
